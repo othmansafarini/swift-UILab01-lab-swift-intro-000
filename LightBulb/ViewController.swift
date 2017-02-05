@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        lightBulb.backgroundColor = UIColor.blue
+      //  lightBulb.backgroundColor = UIColor.blue
         
     }
     
@@ -26,10 +26,29 @@ class ViewController: UIViewController {
         
         print(sender.selectedSegmentIndex)
         
-    }
+        switch sender.selectedSegmentIndex {
+        case 0:
+            lightBulb.backgroundColor = UIColor.red
+            break
+        case 1:
+            lightBulb.backgroundColor = UIColor.yellow
+            break
+        case 2:
+            lightBulb.backgroundColor = UIColor.blue
+            break
+        case 3:
+            lightBulb.backgroundColor = UIColor.green
+            break
+        default:
+            lightBulb.backgroundColor = UIColor.gray
+        }
+        
+        
+        }
+
     
     
 
    
-
 }
+
